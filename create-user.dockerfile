@@ -1,4 +1,4 @@
-FROM tverous/pytorch-notebook
+FROM abirdcfly/mxnet-notebook
 
 ARG MY_UID
 ARG MY_GID

@@ -20,8 +20,8 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 # build with some basic python packages
 RUN pip install \
     numpy \
-    torch \
-    jupyterlab
+    mxnet-cu112 \
+    jupyterlab -i https://mirrors.aliyun.com/pypi/simple/ && rm -rvf ~/.cache
 
 # start jupyter lab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
